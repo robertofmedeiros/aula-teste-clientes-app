@@ -1,4 +1,4 @@
-FROM openjdk:17
+FROM maven:3.8.7-eclipse-temurin-19-alpine
 WORKDIR /app
 COPY . .
 RUN mvn package
