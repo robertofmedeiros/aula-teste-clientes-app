@@ -1,5 +1,6 @@
 FROM openjdk:17
-VOLUME /tmp
-ADD target/aula-teste-cliente-api.jar aula-teste-cliente-api.jar
+WORKDIR /app
+COPY . .
+RUN mvn package
 EXPOSE 8080
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","aula-teste-cliente-api.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","target/aula-teste-cliente-api-0.0.1-SNAPSHOT.jar"]
