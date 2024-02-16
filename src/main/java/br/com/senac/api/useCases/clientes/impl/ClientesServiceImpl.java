@@ -35,4 +35,9 @@ public class ClientesServiceImpl implements ClientesService {
     public ClientesResponseDom atualizarCliente(Long id, ClientesRequestDom cliente) throws SenacException {
         return clientesBusiness.atualizarCliente(id, cliente);
     }
+
+    @Override
+    public void deletarCliente(Long id) {
+        clientesBusiness.deletarCliente(id);
+    }
 }

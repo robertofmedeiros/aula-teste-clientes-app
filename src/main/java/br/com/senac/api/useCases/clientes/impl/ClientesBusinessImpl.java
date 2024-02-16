@@ -75,6 +75,11 @@ public class ClientesBusinessImpl implements ClientesBusiness {
         return null;
     }
 
+    @Override
+    public void deletarCliente(Long id) {
+        clientesRepository.deleteById(id);
+    }
+
     public List<String> validacoesCliente(ClientesRequestDom cliente){
         List<String> messages = new ArrayList<>();
 

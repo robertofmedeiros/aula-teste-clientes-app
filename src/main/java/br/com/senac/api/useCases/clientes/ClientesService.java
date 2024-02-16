@@ -12,4 +12,5 @@ public interface ClientesService {
     ClientesResponseDom carregarCliente(Long id);
 
     ClientesResponseDom atualizarCliente(Long id, ClientesRequestDom cliente) throws SenacException;
+    void deletarCliente(Long id);
 }

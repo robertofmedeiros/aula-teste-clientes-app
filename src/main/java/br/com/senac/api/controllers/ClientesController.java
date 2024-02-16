@@ -56,4 +56,15 @@ public class ClientesController {
             return ResponseEntity.badRequest().body(ResponseUtil.responseMapper(e.getMessages()));
         }
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deletarCliente(@PathVariable Long id){
+        try{
+            clientesService.deletarCliente(id);
+            return ResponseEntity.ok(null);
+        } catch (Exception e){
+            e.printStackTrace();
+            return ResponseEntity.badRequest().body(ResponseUtil.responseMapper(e.getMessage()));
+        }
+    }
 }
