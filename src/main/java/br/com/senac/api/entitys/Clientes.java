@@ -2,13 +2,13 @@ package br.com.senac.api.entitys;
 
 import jakarta.persistence.*;
 import org.hibernate.annotations.SQLDelete;
-import org.hibernate.annotations.Where;
+import org.hibernate.annotations.SQLRestriction;
 
 import java.time.LocalDateTime;
 
 @Entity(name = "clientes")
 @SQLDelete(sql = "UPDATE clientes SET deleted_at = now() WHERE id=?")
-@Where(clause = "deleted_at is null")
+@SQLRestriction("deleted_at is null")
 public class Clientes {
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)

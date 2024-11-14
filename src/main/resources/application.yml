@@ -5,7 +5,7 @@ spring:
       ddl-auto: update
     show-sql: true
   datasource:
-    url: jdbc:postgresql://dpg-cn6e425jm4es73939hi0-a:5432/aula_teste_clientes_app_db
-    password: CF6iLhjK3makAICtjvD6zuzHEKnLPopo
-    username: aula_teste_clientes_app_db_user
+    url: jdbc:postgresql://localhost:5432/aula_teste_clientes
+    password: 1234
+    username: postgres
     driverClassName: org.postgresql.Driver

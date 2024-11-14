@@ -1,7 +1,6 @@
 package br.com.senac.api.useCases.clientes.impl;
 
 import br.com.senac.api.frameWork.utils.SenacException;
-import br.com.senac.api.useCases.clientes.ClientesBusiness;
 import br.com.senac.api.useCases.clientes.ClientesService;
 import br.com.senac.api.useCases.clientes.domanis.ClientesRequestDom;
 import br.com.senac.api.useCases.clientes.domanis.ClientesResponseDom;
