@@ -45,6 +45,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>aula-teste-cliente-api</finalName>
 	</build>
 
 </project>
