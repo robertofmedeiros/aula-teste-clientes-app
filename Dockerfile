@@ -1,6 +1,8 @@
-FROM maven:3.8.7-eclipse-temurin-19-alpine
-WORKDIR /app
+FROM maven:3.9.9-eclipse-temurin-23-alpine as build
+
 COPY . /usr/src/mymaven/
+
+WORKDIR /usr/src/mymaven/
 RUN mvn clean install -Dmaven.test.skip=true -P prod
 EXPOSE 8080
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","target/aula-teste-cliente-api.jar", , "--spring.profiles.active=prod"]
+ENTRYPOINT ["java","-jar","target/aula-teste-cliente-api.jar", , "--spring.profiles.active=prod"]
